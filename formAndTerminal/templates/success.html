@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
   </head>
   <body>
-    <h1>Thank you for your submission</h1>
-    <p>Your name is {{ name }}</p>
-    <p>Your email is {{ email }}</p>
-    <p>Your phone is {{ phone }}</p>
-    <p>Your student ID is {{ id }}</p>
-    <p>
-      If this infortmation is correct, you can go in and sit down at your
-      preferred table.
-    </p>
-    <a href="{% url 'home' %}">Go back to the home page</a>
+    <div class="success-bdy">
+      <h1>Thank you for your submission</h1>
+      <p>Name: {{ name }}</p>
+      <p>Knox Email: {{ email }}</p>
+      <p>Phone Number: {{ phone }}</p>
+      <p>Student ID: {{ id }}</p>
+      <p>
+        If this infortmation is correct, you can go in and sit down at your
+        preferred table.
+      </p>
+      <a href="{% url 'home' %}">Go back to the home page</a>
+      <a href="{% url 'contact' %}">Submit another form</a>
+    </div>
   </body>
 </html>

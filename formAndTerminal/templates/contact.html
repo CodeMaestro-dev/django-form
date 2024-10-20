@@ -1,18 +1,19 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Makerspace Form</title>
     <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
-</head>
-<body>
-    <h1>Makerspace Form</h1>
-    <form action="{% url 'contact' %}" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
+  </head>
+  <body>
+    <h1>Makerspace Entry Form</h1>
+    <div class="form-bdy">
+      <form action="{% url 'contact' %}" method="post">
+        {% csrf_token %} {{ form.as_p }}
         <button class="btn" type="submit">Submit</button>
-    </form>
-</body>
+      </form>
+    </div>
+  </body>
 </html>

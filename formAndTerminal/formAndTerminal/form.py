@@ -13,6 +13,11 @@ class MakerspaceForm(forms.Form):
         id = self.cleaned_data['id']
 
         # send email
-        print(name, email, phone, id)
+        print({
+            'name': name,
+            'email': email,
+            'phone': phone,
+            'id': id
+        })
 
-        return True
+        return name, email, phone, id
