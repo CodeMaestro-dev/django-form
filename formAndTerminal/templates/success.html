@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makerspace Form</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
+  </head>
+  <body>
+    <h1>Thank you for your submission</h1>
+    <p>Your name is {{ name }}</p>
+    <p>Your email is {{ email }}</p>
+    <p>Your phone is {{ phone }}</p>
+    <p>Your student ID is {{ id }}</p>
+    <p>
+      If this infortmation is correct, you can go in and sit down at your
+      preferred table.
+    </p>
+    <a href="{% url 'home' %}">Go back to the home page</a>
+  </body>
+</html>

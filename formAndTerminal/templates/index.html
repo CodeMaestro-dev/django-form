@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makerspace Form</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
+  </head>
+  <body>
+    <main class="main-bdy">
+      <h1>Makerspace Form</h1>
+      <form action="{% url 'contact' %}" method="get">
+        <button class="btn" type="submit">Click to Enter Form</button>
+      </form>
+    </main>
+  </body>
+</html>
